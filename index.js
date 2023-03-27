@@ -1,6 +1,14 @@
 console.log("Hello");
 
 let newsdata = {};
+const saveInfo = () => {
+    resultado = document.getElementById("text").value;
+    localStorage.setItem("valor", resultado);
+    console.log(resultado);
+}
+const showInfo = () => {
+    console.log(localStorage.getItem("valor"));
+}
 const apiactivate = () =>{
     fetch(
         `https://api.thenewsapi.com/v1/news/top?api_token=bhbnQy1PnjlwPLgjQ2xsmOdM5JVe8ZiA1BPWuuZo&locale=us&limit=3`,
